@@ -1,7 +1,11 @@
-<%= form_for(user || update_status_form) do |f| %>
-  <label>
-    Status:
-    <%= f.select :status, User.STATUS_OPTIONS %>
-  </label>
-  <%= f.submit "Update Status" %>
+<%= form_for(user || update_status_form, class: 'form-inline') do |f| %>
+  <label>My status <%= f.select :status, User.STATUS_OPTIONS %></label>
 <% end %>
+
+<script>
+  $(function () {
+    $("#user_status").on("change", function () {
+      $(this).parents('form').first().submit()
+    })
+  })
+</script>
