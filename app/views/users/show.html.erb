@@ -1,3 +1,9 @@
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<p>Email:
+  <% if user_signed_in? %>
+    <%= @user.email if @user.email %>
+  <% else %>
+    Must be logged in to see email addresses
+  <% end %>
+</p>
