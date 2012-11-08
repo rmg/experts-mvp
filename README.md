@@ -1,4 +1,5 @@
 ## Experts MVP
+&copy; 2012 Ryan Graham. All rights reserved.
 
 This is a minimum viable product level implementation of an in/out board
 as one might want in an office environment. Realisitically, everyone is
