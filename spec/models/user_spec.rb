@@ -100,4 +100,19 @@ describe User do
 
   end
 
+  describe "status setting" do
+    it "should have a status field" do
+      user = User.new(@attr)
+      user.status = 'monkey'
+      user.status.should == 'monkey'
+    end
+    it "should persist the status field" do
+      user = User.new(@attr)
+      user.status = 'monkey'
+      user.save!
+      user.reload
+      user.status.should == 'monkey'
+    end
+  end
+
 end
