@@ -9,4 +9,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def update
+    @user = User.find(params[:id])
+    @user.status = params[:user][:status]
+    if @user.save
+      flash[:notice] = "Status updated"
+    else
+      flash[:error] = "Something went"
+    end
+    redirect_to root_path
+  end
+
 end

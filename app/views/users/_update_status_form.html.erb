@@ -1,0 +1,7 @@
+<%= form_for(user || update_status_form) do |f| %>
+  <label>
+    Status:
+    <%= f.select :status, User.STATUS_OPTIONS %>
+  </label>
+  <%= f.submit "Update Status" %>
+<% end %>

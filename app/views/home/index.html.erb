@@ -1,4 +1,9 @@
 <h3>Home</h3>
+
+<% if user_signed_in? %>
+  <%= render partial: 'users/update_status_form', locals: {user: current_user} %>
+<% end %>
+
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
 <% end %>
