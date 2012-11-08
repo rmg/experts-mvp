@@ -5,5 +5,12 @@
 <% end %>
 
 <% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
+  <div class="row">
+    <div class="span2">
+      <%=link_to user.name, user %>
+    </div>
+    <div class="span1">
+      <%= status_badge user.status %>
+    </div>
+  </div>
 <% end %>

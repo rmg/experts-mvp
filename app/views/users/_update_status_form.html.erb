@@ -1,5 +1,5 @@
 <%= form_for(user || update_status_form, class: 'form-inline') do |f| %>
-  <label>My status <%= f.select :status, User.STATUS_OPTIONS %></label>
+  <label>I am <%= f.select :status, User.STATUS_OPTIONS %></label>
 <% end %>
 
 <script>
